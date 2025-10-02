@@ -559,55 +559,110 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // WhatsApp hesap numaraları
-      const whatsappAccounts = [
-        "19372196750",
-        "14024096896"
-      ];
+    // 谷歌官方推荐的增强版转化跟踪
+    function handleEnhancedCTAClick(e) {
+      e.preventDefault();
       
-      // Değişkenler
+      // 预定义WhatsApp链接
+      const whatsappUrl = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
+      
+      // 方法1: 使用官方推荐的event_callback
+      const gaEventSent = new Promise((resolve) => {
+        try {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17495885173/41m8CI_50aUbEPWK2JZB',
+            'event_callback': function() {
+              console.log('GA转化事件确认发送');
+              resolve(true);
+            }
+          });
+        } catch (error) {
+          console.warn('GA事件发送异常:', error);
+          resolve(false);
+        }
+      });
+
+      // 方法2: 使用官方推荐的等待机制
+      const minimalWait = new Promise(resolve => setTimeout(resolve, 150));
+      
+      // 并行处理：等待GA回调或最小等待时间
+      Promise.race([gaEventSent, minimalWait])
+        .then((result) => {
+          if (result === true) {
+            console.log('GA事件成功发送');
+          } else {
+            console.log('继续跳转（GA可能未确认）');
+          }
+          // 无论如何都进行跳转
+          window.location.href = whatsappUrl;
+        })
+        .catch((error) => {
+          console.error('处理过程中出错:', error);
+          // 错误情况下也确保跳转
+          window.location.href = whatsappUrl;
+        });
+    }
+
+    // 检查GA是否可用
+    function isGAAvailable() {
+      return typeof gtag !== 'undefined' && 
+             typeof dataLayer !== 'undefined' &&
+             dataLayer && dataLayer.push;
+    }
+
+    // 主初始化函数
+    document.addEventListener('DOMContentLoaded', function() {
+      // WhatsApp配置
+      const whatsappAccounts = ["19372196750", "14024096896"];
       const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
       const whatsappMessage = encodeURIComponent("Merhaba, online yarı zamanlı yüksek gelirli işe katılmakla ilgileniyorum!");
-      const assignedWhatsAppLink = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
       
       // DOM Elements
       const mobileMenuBtn = document.getElementById('mobileMenuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
       const ctaButtons = document.querySelectorAll('.cta-button');
-      
+
       // Mobile menu toggle
       mobileMenuBtn.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
       });
-      
+
       // Close mobile menu when clicking outside
       document.addEventListener('click', function(e) {
         if (!mobileMenu.contains(e.target) && e.target !== mobileMenuBtn) {
           mobileMenu.classList.remove('active');
         }
       });
-      
-      // CTA Button Click Handler
-      function handleCTAClick(e) {
-        e.preventDefault();
-        
-        // Google Analytics event gönder
-        try {
-          gtag_report_conversion(assignedWhatsAppLink);
-        } catch (error) {
-          console.error('GA event gönderilemedi, WhatsApp\'a yönlendiriliyor:', error);
-          // GA hata verse bile WhatsApp'a yönlendir
-          window.location.href = assignedWhatsAppLink;
-        }
-      }
-      
-      // Tüm CTA butonlarına event listener ekle
+
+      // 优化的CTA点击处理
       ctaButtons.forEach(button => {
-        button.addEventListener('click', handleCTAClick);
+        button.addEventListener('click', function(e) {
+          // 防止多次点击
+          if (this.getAttribute('data-processing') === 'true') {
+            e.preventDefault();
+            return;
+          }
+          
+          this.setAttribute('data-processing', 'true');
+          
+          // 短暂禁用按钮防止重复提交
+          setTimeout(() => {
+            this.removeAttribute('data-processing');
+          }, 2000);
+          
+          // 检查GA可用性
+          if (!isGAAvailable()) {
+            console.warn('GA不可用，直接跳转WhatsApp');
+            window.location.href = `https://wa.me/${randomAccount}?text=${whatsappMessage}`;
+            return;
+          }
+          
+          // 使用增强版处理
+          handleEnhancedCTAClick(e);
+        });
       });
-      
-      // Yumuşak kaydırma ekle
+
+      // 平滑滚动
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (anchor.getAttribute('href') !== '#' && 
             !anchor.classList.contains('cta-button')) {
@@ -627,8 +682,8 @@
           });
         }
       });
-      
-      // Fade-in animasyonu ekle
+
+      // 交互动画
       const observerOptions = {
         root: null,
         rootMargin: '0px',
