@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hawaii Micro Tasks | Work From Home Opportunities for Hawaii Residents</title>
+  <meta name="description" content="Join Hawaii's premier micro-task platform. Earn money completing simple online tasks from home. Flexible schedule, daily payments, perfect for Hawaii lifestyle." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17512015354"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17512015354');
+  </script>
+
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.open(url, '_blank');
+        }
+      };
+      setTimeout(function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17512015354/C5XdCNf096UbEPrLsJ5B',
+          'event_callback': callback
+        });
+      }, 200);
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">MiniJob</a>
+      <nav class="nav-links">
+        <a href="#roles" class="nav-link">Work Styles</a>
+        <a href="#benefits" class="nav-link">Why Choose Us</a>
+        <a href="#tasks" class="nav-link">Available Tasks</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#" class="btn btn-orange open-form-btn">Start Earning</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-cta">
+      <a href="#" class="btn btn-orange open-form-btn">Start Earning</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="top" class="hero">
+    <div class="container">
+      <!-- Hero Header -->
+      <div class="hero-header fade-in">
+        <span class="urgency-badge">For Residents and Visitors in Hawaii</span>
+        <h1>Earn Money From Home in Hawaii <span class="usa-flag">🇺🇸</span></h1>
+        <p class="subtitle">
+          Join Hawaii's most trusted micro-task platform and Start earning flexible income. 
+        </p>
+        
+        <!-- Trust Logos -->
+        <div class="logos" aria-label="Trusted by Hawaii Companies">
+          <span class="logo">🏢 Hawaiian Airlines</span>
+          <span class="logo">📦 Amazon</span>
+          <span class="logo">🏦 First Hawaiian Bank</span>
+          <span class="logo">🚢 Matson</span>
+        </div>
+      </div>
+
+      <!-- Hero Content Grid -->
+      <div class="hero-grid">
+        <!-- 左侧：表单 -->
+        <aside id="apply" class="form-card fade-in" aria-label="Application Form">
+          <h2 class="form-title">Start in 24 Hours</h2>
+          <p class="form-note">Complete your application and we'll contact you via WhatsApp.</p>
+          
+          <div class="progress-bar">
+            <div class="progress-step active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+          </div>
+
+          <form id="applicationForm" novalidate>
+            <!-- Honeypot field -->
+            <div class="hp-field">
+              <label for="hp-email">Email</label>
+              <input type="text" id="hp-email" name="hp-email" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field">
+              <label for="name">Full Name<span class="req">*</span></label>
+              <input id="name" name="name" type="text" placeholder="Enter your full name" required autocomplete="name" />
+              <div class="error-text" id="name-error">Please enter your full name</div>
+            </div>
+
+            <div class="field">
+              <label for="phone">WhatsApp Number<span class="req">*</span></label>
+              <div class="phone-input-group">
+                <div class="country-code">
+                  <img src="https://flagcdn.com/w20/us.png" alt="USA Flag" width="16" height="12">
+                  +1
+                </div>
+                <input id="phone" name="phone" type="tel" class="phone-input" placeholder="8081234567" required inputmode="tel" maxlength="10" />
+              </div>
+              <div class="error-text" id="phone-error">Please enter a Hawaii Phone Number</div>
+            </div>
+
+            <div class="field">
+              <label for="age">Your Age<span class="req">*</span></label>
+              <input id="age" name="age" type="text" placeholder="e.g. 25" required inputmode="numeric" maxlength="2" />
+              <div class="error-text" id="age-error">Must be 18-65 years old</div>
+            </div>
+
+            <div class="field check">
+              <input id="consent" name="consent" type="checkbox" required checked />
+              <label for="consent">I agree to the <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms of Service</a></label>
+            </div>
+
+            <button type="submit" class="btn btn-orange btn-block pulse" id="submitBtn">
+              <span class="btn-text">🚀 Start Earning Today</span>
+              <span class="btn-loading" style="display:none;">Processing...</span>
+            </button>
+            
+            <div class="security-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#19c37d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="#19c37d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Your information is 100% secure and protected</span>
+            </div>
+            
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+
+        <!-- 右侧：内容 -->
+        <div class="hero-copy fade-in delay-1">
+          <!-- Additional Info -->
+          <div class="earnings-disclaimer">
+            <p><strong>💰 Realistic Earnings:</strong> Most taskers earn $50-$400 weekly based on their availability and task completion speed. Your results will vary depending on the time you invest and tasks you choose to complete.</p>
+          </div>
+		  
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">💼</div>
+              <div class="feature-text">
+                <h4>Flexible Schedule</h4>
+                <p>Work whenever you want - perfect for Hawaii's relaxed lifestyle</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">💸</div>
+              <div class="feature-text">
+                <h4>Daily Payments</h4>
+                <p>Get paid quickly through secure payment methods</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📱</div>
+              <div class="feature-text">
+                <h4>Mobile Friendly</h4>
+                <p>Complete tasks on your smartphone or computer</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🛡️</div>
+              <div class="feature-text">
+                <h4>No Fees Ever</h4>
+                <p>Completely free to join with no hidden costs</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <h4>🌺 Perfect for Hawaii Lifestyle</h4>
+            <p class="muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+              Whether you're in Honolulu, Maui, Big Island, or Kauai, our platform works seamlessly across the islands. <br>
+              Earn money while enjoying Hawaii's beautiful beaches and perfect weather. <br>
+			  Perfect for students, parents, and anyone looking for supplemental income in the islands.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Micro Tasks Section -->
+  <section id="tasks" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>📊 Simple Tasks, Real Earnings</h2>
+        <p class="muted">Choose from a variety of micro-tasks designed to fit your skills and schedule. Each task comes with clear instructions and fair compensation.</p>
+      </div>
+      
+      <div class="micro-tasks">
+        <div class="micro-task fade-in">
+          <div class="micro-task-icon">🎵</div>
+          <h4>Music Categorization</h4>
+          <p>Listen to short audio clips and help categorize them by genre, mood, or audio quality for AI training purposes.</p>
+        </div>
+        <div class="micro-task fade-in delay-1">
+          <div class="micro-task-icon">📺</div>
+          <h4>Content Review</h4>
+          <p>Watch video content and provide categorization feedback. Help improve content recommendation algorithms.</p>
+        </div>
+        <div class="micro-task fade-in delay-2">
+          <div class="micro-task-icon">📝</div>
+          <h4>Data Entry</h4>
+          <p>Transfer and verify information between different formats. Simple typing tasks with clear guidelines.</p>
+        </div>
+        <div class="micro-task fade-in">
+          <div class="micro-task-icon">🗺️</div>
+          <h4>Map Labeling</h4>
+          <p>Identify and tag locations on digital maps. Help improve navigation and location-based services.</p>
+        </div>
+        <div class="micro-task fade-in delay-1">
+          <div class="micro-task-icon">🛍️</div>
+          <h4>Product Tagging</h4>
+          <p>Categorize products and services for better search results and recommendation systems.</p>
+        </div>
+        <div class="micro-task fade-in delay-2">
+          <div class="micro-task-icon">🔍</div>
+          <h4>Online Research</h4>
+          <p>Find and verify information through simple online searches. Perfect for developing research skills.</p>
+        </div>
+      </div>
+
+      <p class="task-disclaimer">💰 Task availability varies throughout the week. Most tasks pay between $1-5 each. Your total earnings will depend on the number and type of tasks you complete successfully.</p>
+    </div>
+  </section>
+
+  <!-- Roles Section -->
+  <section id="roles" class="section alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>💼 Choose Your Work Style</h2>
+        <p class="muted">Select the commitment level that best fits your schedule, goals, and lifestyle here in Hawaii.</p>
+      </div>
+
+      <div class="cards two-col">
+        <article class="card fade-in">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casual work from home in Hawaii" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="earnings-badge">Flexible: $50–$150 / week</div>
+            <h3>Casual Tasker</h3>
+            <ul class="list">
+              <li>⏰ 1-3 hours daily around your schedule</li>
+              <li>💸 Payment per completed task after review</li>
+              <li>📱 Works great on smartphone or computer</li>
+              <li>🎯 Basic digital skills are sufficient</li>
+              <li>🏠 100% remote from anywhere in Hawaii</li>
+              <li>🌊 Perfect for supplemental income</li>
+            </ul>
+            <a href="#" class="btn btn-orange open-form-btn" style="margin-top: 1rem;">Start as Casual Tasker</a>
+          </div>
+        </article>
+
+        <article class="card fade-in delay-1">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Regular work from home setup" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="earnings-badge">Dedicated: $150–$400 / week</div>
+            <h3>Regular Tasker</h3>
+            <ul class="list">
+              <li>⏰ 3-6 hours daily with flexible timing</li>
+              <li>💸 Higher-paying tasks available</li>
+              <li>💻 Computer recommended for efficiency</li>
+              <li>🎯 Good digital literacy preferred</li>
+              <li>🏠 Set your own hours and workspace</li>
+              <li>🌊 Can serve as primary income source</li>
+            </ul>
+            <a href="#" class="btn btn-orange open-form-btn" style="margin-top: 1rem;">Become Regular Tasker</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefits-media fade-in"></div>
+        <div class="benefits-copy fade-in delay-1">
+          <h2>🌴 Why Hawaii Residents Choose Us</h2>
+          <ul class="stats">
+            <li><strong>10,000+</strong> Active Hawaii Taskers</li>
+            <li><strong>500,000+</strong> Tasks Successfully Completed</li>
+            <li><strong>95%</strong> User Satisfaction Rate</li>
+            <li><strong>24-48h</strong> Average Payment Processing</li>
+          </ul>
+          <p class="muted">These figures represent actual platform performance. Individual results and earnings will vary based on your personal effort, task selection, and completion consistency.</p>
+          
+          <div style="margin-top: 2rem;">
+            <h4>🏝️ Built for Hawaii Lifestyle</h4>
+            <p class="muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+              Our platform understands the unique needs of Hawaii residents. Whether you're balancing work with beach time or need flexible income around family commitments, we've designed our system to work with your island lifestyle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>🌟 Real Stories from Hawaii Taskers</h2>
+        <p class="muted">Hear from actual Hawaii residents who are earning money through our platform.</p>
+      </div>
+      
+      <div class="cards three-col">
+        <blockquote class="testimonial fade-in">
+          <div class="avatar">K</div>
+          <p>"The platform is incredibly user-friendly and the support team actually responds quickly. I received my first payment within 24 hours of completing tasks. Perfect for earning extra money around my college schedule at UH."</p>
+          <footer>— Kealani, Honolulu Student</footer>
+        </blockquote>
+        <blockquote class="testimonial fade-in delay-1">
+          <div class="avatar">M</div>
+          <p>"As a mom in Maui, I needed flexible work that fits around my kids' schedule. This platform lets me earn meaningful income during naptimes and after bedtime. The task variety keeps it interesting too!"</p>
+          <footer>— Malia, Maui Parent</footer>
+        </blockquote>
+        <blockquote class="testimonial fade-in delay-2">
+          <div class="avatar">K</div>
+          <p>"I've tried other platforms but this one stands out for its transparency and fair pay. No hidden fees, clear instructions, and the WhatsApp support is genuinely helpful. Highly recommend for Big Island residents!"</p>
+          <footer>— Kanoa, Big Island Resident</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta">
+    <div class="container cta-inner fade-in">
+      <div>
+        <h2>Ready to Start Your Earning Journey? 🌺</h2>
+        <p class="muted">Join our community of Hawaii residents who are already earning flexible income from home. No experience required - just willingness to learn and complete simple tasks.</p>
+      </div>
+      <a class="btn btn-orange btn-lg pulse open-form-btn" href="#">🚀 Start Earning Today</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>❓ Frequently Asked Questions</h2>
+        <p class="muted">Get answers to common questions about working on our micro-task platform.</p>
+      </div>
+      
+      <details class="faq fade-in">
+        <summary>Are there any costs or fees to join the platform?</summary>
+        <div>No, there are absolutely no costs to join or use our platform. We believe in providing free access to earning opportunities. You'll never pay application fees, membership fees, or any hidden charges.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>How and when will I receive payments for completed tasks?</summary>
+        <div>Payments are processed after your completed tasks pass our quality verification process. Most taskers receive payment within 24-48 hours of task approval through their preferred payment method. <strong>Your total earnings will depend on the number and type of tasks you successfully complete.</strong></div>
+      </details>
+      <details class="faq fade-in">
+        <summary>What equipment or technology do I need to get started?</summary>
+        <div>You primarily need a smartphone with internet connection. Most tasks are mobile-friendly, though some may be easier to complete on a computer. We don't require specialized equipment - just basic digital literacy.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>How will you communicate with me after I apply?</summary>
+        <div>We use WhatsApp for efficient communication because it allows quick updates, task notifications, and easy support. After you apply, we'll contact you via WhatsApp within 24 hours with next steps and available tasks.</div>
+      </details>
+      <details class="faq fade-in">
+        <summary>Is this platform specifically designed for Hawaii residents?</summary>
+        <div>Yes! While our platform technology works everywhere, we've specifically optimized our tasks, support hours, and payment systems for Hawaii residents. We understand the unique cost of living and lifestyle needs across the islands.</div>
+      </details>
+      
+      <div class="disclaimer fade-in">
+        <strong>📝 Important Disclaimer:</strong> The earning amounts shown throughout this website are examples based on platform averages and are not guarantees or promises of specific income. Your actual earnings will vary based on your personal effort, task completion speed, accuracy, and task availability. Consistent work and careful attention to instructions typically yield the best results.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#top">HawaiiMicroTasks</a>
+        <p class="muted small">Hawaii Micro Tasks Platform LLC | Serving All Hawaiian Islands</p>
+        <p class="muted small">Providing genuine earning opportunities to Hawaii residents since 2023. No fees, just fair work for fair pay.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact Support</a>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="muted small">© 2024 Hawaii Micro Tasks Platform LLC. All rights reserved. Income examples are for illustrative purposes only and do not represent guarantees. Your actual earnings will depend on your individual effort, task selection, and completion consistency. Platform availability may vary.</p>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content" aria-labelledby="modalTitle" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+      <div class="success-animation">
+        <div class="checkmark">✓</div>
+      </div>
+      <h3 class="modal-title" id="modalTitle">Application Received! 🎉</h3>
+      <p class="modal-message">Thank you for applying to Hawaii Micro Tasks! We've received your information and will contact you via WhatsApp within 24 hours with available tasks and next steps.</p>
+      <button class="modal-btn" id="modalOkBtn">Continue to WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="modal" id="formModal">
+    <div class="modal-content" style="max-width: 450px;" aria-labelledby="modalFormTitle" role="dialog" aria-modal="true">
+      <button class="modal-close" id="formModalCloseBtn" aria-label="Close">&times;</button>
+      <h2 class="form-title" id="modalFormTitle">Start Earning Today</h2>
+      <p class="form-note">Join our Hawaii tasker community. We'll contact you via WhatsApp within 24 hours with available tasks.</p>
+      
+      <form id="modalApplicationForm" novalidate>
+        <div class="hp-field">
+          <label for="modal-hp-email">Email</label>
+          <input type="text" id="modal-hp-email" name="hp-email" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="modal-name">Full Name<span class="req">*</span></label>
+          <input id="modal-name" name="name" type="text" placeholder="Enter your full name" required autocomplete="name" />
+          <div class="error-text" id="modal-name-error">Please enter your full name</div>
+        </div>
+
+        <div class="field">
+          <label for="modal-phone">WhatsApp Number<span class="req">*</span></label>
+          <div class="phone-input-group">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w20/us.png" alt="USA Flag" width="16" height="12">
+              +1
+            </div>
+            <input id="modal-phone" name="phone" type="tel" class="phone-input" placeholder="8081234567" required inputmode="tel" maxlength="10" />
+          </div>
+          <div class="error-text" id="modal-phone-error">Please enter a valid phone number</div>
+        </div>
+
+        <div class="field">
+          <label for="modal-age">Your Age<span class="req">*</span></label>
+          <input id="modal-age" name="age" type="text" placeholder="e.g. 25" required inputmode="numeric" maxlength="2" />
+          <div class="error-text" id="modal-age-error">Must be 18-65 years old</div>
+        </div>
+
+        <div class="field check">
+          <input id="modal-consent" name="consent" type="checkbox" required checked />
+          <label for="modal-consent">I agree to Privacy Policy and Terms of Service</label>
+        </div>
+
+        <button type="submit" class="btn btn-orange btn-block pulse" id="modalSubmitBtn">
+          <span class="btn-text">🚀 Submit Application</span>
+          <span class="btn-loading" style="display:none;">Processing...</span>
+        </button>
+        
+        <div class="security-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#19c37d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 12L11 14L15 10" stroke="#19c37d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Your information is 100% secure and protected</span>
+        </div>
+        
+        <p id="modalFormStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // WhatsApp numbers
+      const whatsappAccounts = [
+        "12078760166",
+        "14353133750", 
+        "15172403846",
+        "15795034996",
+        "15878507573",
+        "17542495207"
+      ];
+      
+      const randomAccount = whatsappAccounts[Math.floor(Math.random() * whatsappAccounts.length)];
+      const assignedWhatsAppLink = `https://wa.me/${randomAccount}?text=${encodeURIComponent("Aloha! I just applied for Hawaii Micro Tasks and I'm excited to start earning!")}`;
+      let formSubmitted = false;
+      
+      // DOM Elements
+      const form = document.getElementById('applicationForm');
+      const modalForm = document.getElementById('modalApplicationForm');
+      const successModal = document.getElementById('successModal');
+      const formModal = document.getElementById('formModal');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openFormBtns = document.querySelectorAll('.open-form-btn');
+      
+      // lazyLoadImages
+      function lazyLoadImages() {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.classList.remove('lazyload');
+              img.classList.add('lazyloaded');
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+        
+        lazyImages.forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+      
+      lazyLoadImages();
+      
+      // Mobile menu
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!mobileMenu.contains(e.target) && e.target !== mobileMenuBtn) {
+          mobileMenu.classList.remove('active');
+        }
+      });
+      
+      // Form modal
+      function openFormModal() {
+        formModal.classList.add('active');
+      }
+      
+      function closeFormModal() {
+        formModal.classList.remove('active');
+      }
+      
+      function openSuccessModal() {
+        successModal.classList.add('active');
+      }
+      
+      function closeSuccessModal() {
+        successModal.classList.remove('active');
+      }
+      
+      // Form validation
+      function validatePhoneNumber(phone) {
+        const cleaned = phone.replace(/\D/g, '');
+        return cleaned.length === 10;
+      }
+      
+      function validateAge(age) {
+        const ageNum = parseInt(age, 10);
+        return !isNaN(ageNum) && ageNum >= 18 && ageNum <= 65;
+      }
+      
+      function validateName(name) {
+        return name.trim().length >= 2;
+      }
+      
+      function handleFormSubmit(e, formElement, submitButton) {
+        e.preventDefault();
+        
+        let isValid = true;
+        
+        // Name validation
+        const nameInput = formElement.querySelector('input[name="name"]');
+        if (!validateName(nameInput.value)) {
+          isValid = false;
+          nameInput.classList.add('error');
+        }
+        
+        // Phone validation
+        const phoneInput = formElement.querySelector('input[name="phone"]');
+        if (!validatePhoneNumber(phoneInput.value)) {
+          isValid = false;
+          phoneInput.classList.add('error');
+        }
+        
+        // Age validation
+        const ageInput = formElement.querySelector('input[name="age"]');
+        if (!validateAge(ageInput.value)) {
+          isValid = false;
+          ageInput.classList.add('error');
+        }
+        
+        if (!isValid) return;
+        
+        // Loading state
+        const btnText = submitButton.querySelector('.btn-text');
+        const btnLoading = submitButton.querySelector('.btn-loading');
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        submitButton.disabled = true;
+        
+        // Success - 移除之前的GA事件上报
+        setTimeout(() => {
+          formSubmitted = true;
+          
+          // 只打开成功弹窗，不上报GA事件
+          openSuccessModal();
+          if (formElement === modalForm) {
+            closeFormModal();
+          }
+          
+          btnText.style.display = 'inline';
+          btnLoading.style.display = 'none';
+          submitButton.disabled = false;
+        }, 1000);
+      }
+      
+      // Event listeners
+      form.addEventListener('submit', function(e) {
+        handleFormSubmit(e, form, document.getElementById('submitBtn'));
+      });
+      
+      modalForm.addEventListener('submit', function(e) {
+        handleFormSubmit(e, modalForm, document.getElementById('modalSubmitBtn'));
+      });
+      
+      openFormBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openFormModal();
+        });
+      });
+      
+      // Modal close buttons
+      document.getElementById('modalCloseBtn').addEventListener('click', closeSuccessModal);
+      document.getElementById('formModalCloseBtn').addEventListener('click', closeFormModal);
+      
+      // 修改Continue按钮事件 - 在这里上报GA事件
+      document.getElementById('modalOkBtn').addEventListener('click', function() {
+        // 上报GA事件并打开WhatsApp
+        gtag_report_conversion(assignedWhatsAppLink);
+        closeSuccessModal();
+      });
+      
+      // Close modals on outside click
+      successModal.addEventListener('click', function(e) {
+        if (e.target === successModal) closeSuccessModal();
+      });
+      
+      formModal.addEventListener('click', function(e) {
+        if (e.target === formModal) closeFormModal();
+      });
+      
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (anchor.getAttribute('href') !== '#' && !anchor.classList.contains('open-form-btn')) {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        }
+      });
+      
+      // Fade-in animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
